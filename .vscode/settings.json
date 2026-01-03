@@ -1,0 +1,11 @@
+{
+	"files.associations": {
+		"*.astro": "astro"
+	},
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"astro.typescript.tsdk": "./node_modules/typescript/lib",
+	"astro.typescript.workspaceTsConfig": "./tsconfig.json"
+}
+
