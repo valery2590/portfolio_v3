@@ -1,46 +1,22 @@
-# Astro Starter Kit: Basics
+# 🚀 Valery's Portfolio v3
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to my personal portfolio! This project showcases my journey, skills, and the software projects I've built.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🛠️ Tech Stack
 
-## 🚀 Project Structure
+- **Framework:** [Astro](https://astro.build/) - Chosen for its incredible performance and "Island Architecture."
+- **Deployment:** [Vercel](https://vercel.com/) - Leveraging automatic CI/CD and Edge network hosting.
+- **Infrastructure:** [Cloudflare](https://www.cloudflare.com/) - Managing DNS and security.
+- **Styling:** Tailwind CSS / CSS Modules (Update this as per your choice).
 
-Inside of your Astro project, you'll see the following folders and files:
+## 💡 Why Astro?
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+I chose **Astro** for this version of my portfolio to ensure the best possible user experience. By delivering zero JavaScript by default, the site achieves near-perfect Lighthouse scores, ensuring fast load times and better SEO.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📦 Local Development
 
-## 🧞 Commands
+To run this project locally, follow these steps:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/valery2590/portfolio_v3.git](https://github.com/valery2590/portfolio_v3.git)
