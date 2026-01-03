@@ -1,199 +1,238 @@
 ---
-import { getTranslations, getDefaultLanguage } from '../i18n/utils';
+import { getTranslations, getDefaultLanguage } from "../i18n/utils";
 
 const currentLang = getDefaultLanguage();
 const t = getTranslations(currentLang);
 
 const projects = [
-	{
-		titleKey: "project1",
-		tech: ["React", "TypeScript", "Node.js"],
-		link: "#",
-		github: "#"
-	},
-	{
-		titleKey: "project2",
-		tech: ["Vue.js", "Express", "MongoDB"],
-		link: "#",
-		github: "#"
-	},
-	{
-		titleKey: "project3",
-		tech: ["React Native", "Firebase", "Redux"],
-		link: "#",
-		github: "#"
-	},
-	{
-		titleKey: "project4",
-		tech: ["Next.js", "D3.js", "PostgreSQL"],
-		link: "#",
-		github: "#"
-	}
+  {
+    titleKey: "project1",
+    tech: ["React", "TypeScript", "Node.js"],
+    link: "#",
+    github: "#",
+  },
+  {
+    titleKey: "project2",
+    tech: ["Vue.js", "Express", "MongoDB"],
+    link: "#",
+    github: "#",
+  },
+  {
+    titleKey: "project3",
+    tech: ["React Native", "Firebase", "Redux"],
+    link: "#",
+    github: "#",
+  },
+  {
+    titleKey: "project4",
+    tech: ["Next.js", "D3.js", "PostgreSQL"],
+    link: "#",
+    github: "#",
+  },
 ];
 ---
 
 <section id="projects" class="projects">
-	<div class="container">
-		<h2 class="section-title" data-i18n="projects.title">{t.projects.title}</h2>
-		<div class="projects-grid">
-			{projects.map((project, index) => {
-				const projectKey = `project${index + 1}` as keyof typeof t.projects;
-				const projectData = t.projects[projectKey];
-				return (
-					<article class="project-card" data-project-index={index}>
-						<div class="project-header">
-							<h3 data-i18n={`projects.${projectKey}.title`}>{projectData.title}</h3>
-							<div class="project-links">
-								<a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-										<polyline points="15 3 21 3 21 9"></polyline>
-										<line x1="10" y1="14" x2="21" y2="3"></line>
-									</svg>
-								</a>
-								<a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="Ver código">
-									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-										<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-									</svg>
-								</a>
-							</div>
-						</div>
-						<p class="project-description" data-i18n={`projects.${projectKey}.description`}>{projectData.description}</p>
-						<div class="project-tech">
-							{project.tech.map((tech) => (
-								<span class="tech-tag">{tech}</span>
-							))}
-						</div>
-					</article>
-				);
-			})}
-		</div>
-	</div>
+  <div class="container">
+    <h2 class="section-title" data-i18n="projects.title">{t.projects.title}</h2>
+    <div class="projects-grid">
+      {
+        projects.map((project, index) => {
+          const projectKey = `project${index + 1}` as keyof typeof t.projects;
+          const projectData = t.projects[projectKey];
+          return (
+            <article class="project-card" data-project-index={index}>
+              <div class="project-header">
+                <h3 data-i18n={`projects.${projectKey}.title`}>
+                  {projectData.title}
+                </h3>
+                <div class="project-links">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver proyecto"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Ver código"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p
+                class="project-description"
+                data-i18n={`projects.${projectKey}.description`}
+              >
+                {projectData.description}
+              </p>
+              <div class="project-tech">
+                {project.tech.map((tech) => (
+                  <span class="tech-tag">{tech}</span>
+                ))}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
 </section>
 
 <style>
-	.projects {
-		padding: 6rem 2rem;
-		background-color: var(--bg-primary);
-	}
+  h2.section-title {
+    margin-bottom: 2rem;
+  }
+  .projects {
+    padding: 6rem 2rem;
+    background-color: var(--bg-primary);
+  }
 
-	.projects-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
 
-	.project-card {
-		background-color: var(--card-bg);
-		border: 1px solid var(--border);
-		border-radius: 16px;
-		padding: 2rem;
-		transition: all 0.3s ease;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
+  .project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-	.project-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 40px var(--shadow);
-		border-color: var(--accent);
-	}
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px var(--shadow);
+    border-color: var(--accent);
+  }
 
-	.project-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: 1rem;
-	}
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-	.project-header h3 {
-		font-size: 1.5rem;
-		font-weight: 700;
-		color: var(--text-primary);
-		margin: 0;
-	}
+  .project-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
 
-	.project-links {
-		display: flex;
-		gap: 0.75rem;
-		flex-shrink: 0;
-	}
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
 
-	.project-links a {
-		color: var(--text-secondary);
-		transition: color 0.3s ease, transform 0.3s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 32px;
-		height: 32px;
-	}
+  .project-links a {
+    color: var(--text-secondary);
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+  }
 
-	.project-links a:hover {
-		color: var(--accent);
-		transform: scale(1.1);
-	}
+  .project-links a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+  }
 
-	.project-links svg {
-		width: 20px;
-		height: 20px;
-	}
+  .project-links svg {
+    width: 20px;
+    height: 20px;
+  }
 
-	.project-description {
-		color: var(--text-secondary);
-		line-height: 1.6;
-		flex-grow: 1;
-	}
+  .project-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
 
-	.project-tech {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin-top: auto;
-	}
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
 
-	.tech-tag {
-		padding: 0.4rem 0.8rem;
-		background-color: var(--bg-secondary);
-		border: 1px solid var(--border);
-		border-radius: 6px;
-		font-size: 0.875rem;
-		color: var(--accent);
-		font-weight: 500;
-	}
+  .tech-tag {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
 
-	@media (max-width: 768px) {
-		.projects-grid {
-			grid-template-columns: 1fr;
-		}
-	}
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 
 <script>
-	import { getTranslations } from '../i18n/utils';
-	import type { Language } from '../i18n/translations';
+  import { getTranslations } from "../i18n/utils";
+  import type { Language } from "../i18n/translations";
 
-	function updateProjects(lang: Language) {
-		const t = getTranslations(lang);
-		
-		const title = document.querySelector('[data-i18n="projects.title"]');
-		if (title) title.textContent = t.projects.title;
+  function updateProjects(lang: Language) {
+    const t = getTranslations(lang);
 
-		document.querySelectorAll('[data-project-index]').forEach((card, index) => {
-			const projectKey = `project${index + 1}` as keyof typeof t.projects;
-			const projectData = t.projects[projectKey];
-			
-			const titleEl = card.querySelector(`[data-i18n="projects.${projectKey}.title"]`);
-			const descEl = card.querySelector(`[data-i18n="projects.${projectKey}.description"]`);
-			
-			if (titleEl) titleEl.textContent = projectData.title;
-			if (descEl) descEl.textContent = projectData.description;
-		});
-	}
+    const title = document.querySelector('[data-i18n="projects.title"]');
+    if (title) title.textContent = t.projects.title;
 
-	window.addEventListener('languagechange', ((e: CustomEvent) => {
-		updateProjects(e.detail.language);
-	}) as EventListener);
+    document.querySelectorAll("[data-project-index]").forEach((card, index) => {
+      const projectKey = `project${index + 1}` as keyof typeof t.projects;
+      const projectData = t.projects[projectKey];
+
+      const titleEl = card.querySelector(
+        `[data-i18n="projects.${projectKey}.title"]`
+      );
+      const descEl = card.querySelector(
+        `[data-i18n="projects.${projectKey}.description"]`
+      );
+
+      if (titleEl) titleEl.textContent = projectData.title;
+      if (descEl) descEl.textContent = projectData.description;
+    });
+  }
+
+  window.addEventListener("languagechange", ((e: CustomEvent) => {
+    updateProjects(e.detail.language);
+  }) as EventListener);
 </script>
-
