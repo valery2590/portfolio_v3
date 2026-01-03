@@ -311,6 +311,14 @@ const t = getTranslations(currentLang);
 </style>
 
 <script>
+	// Type declarations for global window properties
+	declare global {
+		interface Window {
+			translations?: typeof translations;
+			currentLanguage?: Language;
+		}
+	}
+
 	// All translations for client-side updates
 	const translations = {
 		es: {
@@ -450,13 +458,15 @@ const t = getTranslations(currentLang);
 		},
 	};
 
-	const flagMap = {
+	const flagMap: Record<string, string> = {
 		es: '🇪🇸',
 		en: '🇬🇧',
 		it: '🇮🇹'
 	};
 
-	function getDefaultLanguage() {
+	type Language = 'es' | 'en' | 'it';
+
+	function getDefaultLanguage(): Language {
 		const saved = localStorage.getItem('language');
 		if (saved && (saved === 'es' || saved === 'en' || saved === 'it')) {
 			return saved;
@@ -468,19 +478,28 @@ const t = getTranslations(currentLang);
 		return 'es';
 	}
 
-	function setLanguage(lang) {
+	function setLanguage(lang: Language): void {
 		localStorage.setItem('language', lang);
 		document.documentElement.setAttribute('lang', lang);
 		window.dispatchEvent(new CustomEvent('languagechange', { detail: { language: lang } }));
 	}
 
-	function getNestedValue(obj, path) {
-		return path.split('.').reduce((current, key) => current && current[key], obj);
+	function getNestedValue(obj: any, path: string): any {
+		return path.split('.').reduce((current: any, key: string) => current && current[key], obj);
 	}
 
-	function updateLanguage(lang) {
+	function updateLanguage(lang: Language): void {
 		setLanguage(lang);
-		const t = translations[lang];
+		const t = translations[lang as keyof typeof translations];
+		const tHero = (t as any).hero;
+		
+		// Update hero greeting first (special case - always update)
+		const heroTitle = document.querySelector('.hero-title');
+		if (heroTitle && tHero) {
+			const nameSpan = heroTitle.querySelector('.highlight');
+			const name = nameSpan?.textContent || tHero.name;
+			heroTitle.innerHTML = `${tHero.greeting} <span class="highlight">${name}</span>`;
+		}
 		
 		// Update all elements with data-i18n attribute
 		document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -488,31 +507,24 @@ const t = getTranslations(currentLang);
 			if (key) {
 				const value = getNestedValue(t, key);
 				if (value !== undefined) {
-					// Special handling for hero greeting
-					if (key === 'hero.greeting') {
-						const greeting = document.querySelector('.hero-title');
-						if (greeting) {
-							const nameSpan = greeting.querySelector('.highlight');
-							const name = nameSpan?.textContent || t.hero.name;
-							greeting.innerHTML = `${t.hero.greeting} <span class="highlight">${name}</span>`;
-						}
-					} else {
-						element.textContent = value;
-					}
+					element.textContent = value;
 				}
 			}
 		});
 
 		// Update project descriptions
 		document.querySelectorAll('[data-project-index]').forEach((card, index) => {
-			const projectKey = `project${index + 1}`;
-			const titleEl = card.querySelector(`[data-i18n="projects.${projectKey}.title"]`);
-			const descEl = card.querySelector(`[data-i18n="projects.${projectKey}.description"]`);
-			if (titleEl && t.projects[projectKey]) {
-				titleEl.textContent = t.projects[projectKey].title;
-			}
-			if (descEl && t.projects[projectKey]) {
-				descEl.textContent = t.projects[projectKey].description;
+			const projectKey = `project${index + 1}` as keyof typeof t.projects;
+			const projectData = (t.projects as any)[projectKey];
+			if (projectData) {
+				const titleEl = card.querySelector(`[data-i18n="projects.${projectKey}.title"]`);
+				const descEl = card.querySelector(`[data-i18n="projects.${projectKey}.description"]`);
+				if (titleEl) {
+					titleEl.textContent = projectData.title;
+				}
+				if (descEl) {
+					descEl.textContent = projectData.description;
+				}
 			}
 		});
 
@@ -520,15 +532,15 @@ const t = getTranslations(currentLang);
 		document.querySelectorAll('[data-category-key]').forEach(category => {
 			const key = category.getAttribute('data-category-key');
 			const titleEl = category.querySelector('.category-title');
-			if (titleEl && key && t.skills[key]) {
-				titleEl.textContent = t.skills[key];
+			if (titleEl && key && (t.skills as any)[key]) {
+				titleEl.textContent = (t.skills as any)[key];
 			}
 		});
 
 		// Update flag
 		const currentFlag = document.getElementById('current-flag');
 		if (currentFlag) {
-			currentFlag.textContent = flagMap[lang];
+			currentFlag.textContent = flagMap[lang] || '🇪🇸';
 		}
 
 		// Update active state
@@ -555,8 +567,9 @@ const t = getTranslations(currentLang);
 		});
 
 		// Close menu when clicking outside
-		document.addEventListener('click', (e) => {
-			if (!languageToggle.contains(e.target) && !languageMenu.contains(e.target)) {
+		document.addEventListener('click', (e: MouseEvent) => {
+			const target = e.target as Node | null;
+			if (target && !languageToggle.contains(target) && !languageMenu.contains(target)) {
 				languageMenu.classList.remove('active');
 			}
 		});
@@ -564,18 +577,20 @@ const t = getTranslations(currentLang);
 		// Language selection
 		document.querySelectorAll('.language-option').forEach(option => {
 			option.addEventListener('click', () => {
-				const lang = option.getAttribute('data-lang');
-				updateLanguage(lang);
-				languageMenu.classList.remove('active');
+				const lang = option.getAttribute('data-lang') as Language | null;
+				if (lang && (lang === 'es' || lang === 'en' || lang === 'it')) {
+					updateLanguage(lang);
+					languageMenu.classList.remove('active');
+				}
 			});
 		});
 	}
 
 	// Listen for language changes from other components
-	window.addEventListener('languagechange', (e) => {
+	window.addEventListener('languagechange', ((e: CustomEvent<{ language: Language }>) => {
 		const lang = e.detail.language;
 		updateLanguage(lang);
-	});
+	}) as EventListener);
 
 	// Make translations available globally
 	window.translations = translations;
