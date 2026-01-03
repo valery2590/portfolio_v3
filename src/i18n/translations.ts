@@ -75,7 +75,7 @@ export const translations: Record<Language, Translations> = {
 		},
 		hero: {
 			greeting: 'Hola, soy',
-			name: 'Valery Figueroa',
+			name: 'Valery',
 			title: 'Desarrollador Full Stack',
 			description: 'Apasionado por crear soluciones digitales innovadoras y experiencias de usuario excepcionales.',
 			viewProjects: 'Ver Proyectos',
@@ -138,7 +138,7 @@ export const translations: Record<Language, Translations> = {
 		},
 		hero: {
 			greeting: 'Hi, I am',
-			name: 'Valery Figueroa',
+			name: 'Valery',
 			title: 'Full Stack Developer',
 			description: 'Passionate about creating innovative digital solutions and exceptional user experiences.',
 			viewProjects: 'View Projects',
@@ -201,7 +201,7 @@ export const translations: Record<Language, Translations> = {
 		},
 		hero: {
 			greeting: 'Ciao, sono',
-			name: 'Valery Figueroa',
+			name: 'Valery',
 			title: 'Sviluppatore Full Stack',
 			description: 'Appassionato di creare soluzioni digitali innovative ed esperienze utente eccezionali.',
 			viewProjects: 'Vedi Progetti',
