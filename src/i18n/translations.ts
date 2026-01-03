@@ -4,6 +4,7 @@ export interface Translations {
 	nav: {
 		home: string;
 		about: string;
+		integrations: string;
 		projects: string;
 		skills: string;
 		contact: string;
@@ -70,6 +71,7 @@ export interface Translations {
 		crmDesc: string;
 		ecommerce: string;
 		ecommerceDesc: string;
+		listTitle: string;
 	};
 	footer: {
 		copyright: string;
@@ -81,6 +83,7 @@ export const translations: Record<Language, Translations> = {
 		nav: {
 			home: 'Inicio',
 			about: 'Sobre mí',
+			integrations: 'Integraciones',
 			projects: 'Proyectos',
 			skills: 'Habilidades',
 			contact: 'Contacto',
@@ -138,7 +141,7 @@ export const translations: Record<Language, Translations> = {
 		},
 		integrations: {
 			title: 'Integraciones',
-			subtitle: 'Conectando plataformas para crear ecosistemas digitales unificados',
+			subtitle: 'Integraciones entre CRM, E-commerce, WhatsApp y más',
 			api: 'APIs REST & GraphQL',
 			apiDesc: 'Integración de múltiples APIs para sincronización de datos en tiempo real',
 			whatsapp: 'WhatsApp Business API',
@@ -147,6 +150,7 @@ export const translations: Record<Language, Translations> = {
 			crmDesc: 'Integración con Salesforce, HubSpot y otras plataformas CRM',
 			ecommerce: 'E-commerce',
 			ecommerceDesc: 'Conexión con Shopify, WooCommerce y plataformas de pago',
+			listTitle: 'Listado de integraciones que he realizado',
 		},
 		footer: {
 			copyright: '© 2026 Valery Figueroa. Todos los derechos reservados.',
@@ -156,6 +160,7 @@ export const translations: Record<Language, Translations> = {
 		nav: {
 			home: 'Home',
 			about: 'About',
+			integrations: 'Integrations',
 			projects: 'Projects',
 			skills: 'Skills',
 			contact: 'Contact',
@@ -213,7 +218,7 @@ export const translations: Record<Language, Translations> = {
 		},
 		integrations: {
 			title: 'Integrations',
-			subtitle: 'Connecting platforms to create unified digital ecosystems',
+			subtitle: 'Integrations between CRM, E-commerce, WhatsApp and more',
 			api: 'REST & GraphQL APIs',
 			apiDesc: 'Integration of multiple APIs for real-time data synchronization',
 			whatsapp: 'WhatsApp Business API',
@@ -222,6 +227,7 @@ export const translations: Record<Language, Translations> = {
 			crmDesc: 'Integration with Salesforce, HubSpot and other CRM platforms',
 			ecommerce: 'E-commerce',
 			ecommerceDesc: 'Connection with Shopify, WooCommerce and payment platforms',
+			listTitle: 'List of integrations I have worked on',
 		},
 		footer: {
 			copyright: '© 2026 Valery Figueroa. All rights reserved.',
@@ -231,6 +237,7 @@ export const translations: Record<Language, Translations> = {
 		nav: {
 			home: 'Home',
 			about: 'Chi Sono',
+			integrations: 'Integrazioni',
 			projects: 'Progetti',
 			skills: 'Competenze',
 			contact: 'Contatto',
@@ -288,7 +295,7 @@ export const translations: Record<Language, Translations> = {
 		},
 		integrations: {
 			title: 'Integrazioni',
-			subtitle: 'Connessione di piattaforme per creare ecosistemi digitali unificati',
+			subtitle: 'Integrazioni tra CRM, E-commerce, WhatsApp e altro',
 			api: 'API REST & GraphQL',
 			apiDesc: 'Integrazione di multiple API per sincronizzazione dati in tempo reale',
 			whatsapp: 'WhatsApp Business API',
@@ -297,6 +304,7 @@ export const translations: Record<Language, Translations> = {
 			crmDesc: 'Integrazione con Salesforce, HubSpot e altre piattaforme CRM',
 			ecommerce: 'E-commerce',
 			ecommerceDesc: 'Connessione con Shopify, WooCommerce e piattaforme di pagamento',
+			listTitle: 'Lista di integrazioni che ho lavorato',
 		},
 		footer: {
 			copyright: '© 2026 Valery Figueroa. Tutti i diritti riservati.',

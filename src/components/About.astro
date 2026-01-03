@@ -33,11 +33,7 @@ const t = getTranslations(currentLang);
 			</div>
 			<div class="about-image">
 				<div class="image-placeholder">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-						<line x1="9" y1="9" x2="15" y2="9"></line>
-						<line x1="9" y1="15" x2="15" y2="15"></line>
-					</svg>
+						<img src="https://ucarecdn.com/d08c48c3-476a-4df5-aacd-8a59624062cc/" alt="My picture" class="hero-image-img" />
 				</div>
 			</div>
 		</div>
@@ -136,7 +132,7 @@ const t = getTranslations(currentLang);
 		width: 100%;
 		max-width: 400px;
 		aspect-ratio: 1;
-		background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+		/*background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);*/
 		border-radius: 20px;
 		display: flex;
 		align-items: center;
@@ -149,6 +145,11 @@ const t = getTranslations(currentLang);
 		width: 150px;
 		height: 150px;
 	}
+
+	img.hero-image-img {
+    width: 77%;
+	opacity: .8;
+}
 
 	@media (max-width: 968px) {
 		.about-content {

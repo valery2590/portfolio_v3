@@ -1,382 +1,637 @@
 ---
-import { getTranslations, getDefaultLanguage } from '../i18n/utils';
+import { getTranslations, getDefaultLanguage } from "../i18n/utils";
 
 const currentLang = getDefaultLanguage();
 const t = getTranslations(currentLang);
+const integrations = [
+  "Active Campaign",
+  "Casafari",
+  "Easoft",
+  "Educa Edtech",
+  "EGO",
+  "Freshdesk",
+  "Google Chat",
+  "Grupo Planeta",
+  "HubSpot",
+  "Hyundai",
+  "Inmobalia",
+  "JSONLead",
+  "LeadCars",
+  "Linear",
+  "Mailchimp",
+  "Salesforce",
+  "Tecnocasa",
+  "Vitec",
+  "Zendesk",
+  "Zoho",
+];
 ---
 
 <section id="integrations" class="integrations">
-	<div class="container">
-		<h2 class="section-title" data-i18n="integrations.title">Integraciones</h2>
-		<p class="section-subtitle" data-i18n="integrations.subtitle">
-			Conectando plataformas para crear ecosistemas digitales unificados
-		</p>
-		
-		<div class="integrations-visual">
-			<div class="platform-node node-center">
-				<div class="platform-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-						<circle cx="8.5" cy="8.5" r="1.5"></circle>
-						<path d="M21 15l-5-5L5 21"></path>
-					</svg>
-				</div>
-				<span class="platform-name">API Hub</span>
-			</div>
+  <div class="container">
+    <h2 class="section-title" data-i18n="integrations.title">Integraciones</h2>
+    <p class="section-subtitle" data-i18n="integrations.subtitle">
+      Conectando plataformas para crear ecosistemas digitales unificados
+    </p>
 
-			<div class="platform-node node-top-left">
-				<div class="platform-icon whatsapp">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-						<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-					</svg>
-				</div>
-				<span class="platform-name">WhatsApp</span>
-			</div>
+    <div class="integrations-visual">
+      <div class="platform-node node-center">
+        <div class="platform-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <path d="M21 15l-5-5L5 21"></path>
+          </svg>
+        </div>
+        <span class="platform-name">API Hub</span>
+      </div>
 
-			<div class="platform-node node-top-right">
-				<div class="platform-icon crm">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-						<circle cx="9" cy="7" r="4"></circle>
-						<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-					</svg>
-				</div>
-				<span class="platform-name">CRM</span>
-			</div>
+      <div class="platform-node node-top-left">
+        <div class="platform-icon whatsapp">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+            ></path>
+          </svg>
+        </div>
+        <span class="platform-name">WhatsApp</span>
+      </div>
 
-			<div class="platform-node node-bottom-left">
-				<div class="platform-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-						<line x1="8" y1="21" x2="16" y2="21"></line>
-						<line x1="12" y1="17" x2="12" y2="21"></line>
-					</svg>
-				</div>
-				<span class="platform-name">E-commerce</span>
-			</div>
+      <div class="platform-node node-top-right">
+        <div class="platform-icon crm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <span class="platform-name">CRM</span>
+      </div>
 
-			<div class="platform-node node-bottom-right">
-				<div class="platform-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-						<polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-						<line x1="12" y1="22.08" x2="12" y2="12"></line>
-					</svg>
-				</div>
-				<span class="platform-name">APIs</span>
-			</div>
+      <div class="platform-node node-bottom-left">
+        <div class="platform-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <span class="platform-name">E-commerce</span>
+      </div>
 
-			<!-- Connection lines -->
-			<svg class="connections" viewBox="0 0 600 400" preserveAspectRatio="none">
-				<defs>
-					<linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-						<stop offset="0%" style="stop-color:var(--accent);stop-opacity:0.3" />
-						<stop offset="100%" style="stop-color:var(--accent-hover);stop-opacity:0.6" />
-					</linearGradient>
-					<marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-						<polygon points="0 0, 10 3, 0 6" fill="var(--accent)" />
-					</marker>
-				</defs>
-				<line class="connection-line line-1" x1="300" y1="200" x2="150" y2="100" stroke="url(#lineGradient)" stroke-width="2" marker-end="url(#arrowhead)" />
-				<line class="connection-line line-2" x1="300" y1="200" x2="450" y2="100" stroke="url(#lineGradient)" stroke-width="2" marker-end="url(#arrowhead)" />
-				<line class="connection-line line-3" x1="300" y1="200" x2="150" y2="300" stroke="url(#lineGradient)" stroke-width="2" marker-end="url(#arrowhead)" />
-				<line class="connection-line line-4" x1="300" y1="200" x2="450" y2="300" stroke="url(#lineGradient)" stroke-width="2" marker-end="url(#arrowhead)" />
-			</svg>
-		</div>
+      <div class="platform-node node-bottom-right">
+        <div class="platform-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+            ></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <span class="platform-name">APIs</span>
+      </div>
 
-		<div class="integrations-list">
-			<div class="integration-item">
-				<div class="integration-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-					</svg>
-				</div>
-				<h3 data-i18n="integrations.api">APIs REST & GraphQL</h3>
-				<p data-i18n="integrations.apiDesc">Integración de múltiples APIs para sincronización de datos en tiempo real</p>
-			</div>
-			<div class="integration-item">
-				<div class="integration-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-						<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-					</svg>
-				</div>
-				<h3 data-i18n="integrations.whatsapp">WhatsApp Business API</h3>
-				<p data-i18n="integrations.whatsappDesc">Automatización de mensajería y atención al cliente</p>
-			</div>
-			<div class="integration-item">
-				<div class="integration-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-						<circle cx="9" cy="7" r="4"></circle>
-						<path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-					</svg>
-				</div>
-				<h3 data-i18n="integrations.crm">Sistemas CRM</h3>
-				<p data-i18n="integrations.crmDesc">Integración con Salesforce, HubSpot y otras plataformas CRM</p>
-			</div>
-			<div class="integration-item">
-				<div class="integration-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-						<line x1="8" y1="21" x2="16" y2="21"></line>
-						<line x1="12" y1="17" x2="12" y2="21"></line>
-					</svg>
-				</div>
-				<h3 data-i18n="integrations.ecommerce">E-commerce</h3>
-				<p data-i18n="integrations.ecommerceDesc">Conexión con Shopify, WooCommerce y plataformas de pago</p>
-			</div>
-		</div>
-	</div>
+      <!-- Connection lines -->
+      <svg class="connections" viewBox="0 0 600 400" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:var(--accent);stop-opacity:0.3"
+            ></stop>
+            <stop
+              offset="100%"
+              style="stop-color:var(--accent-hover);stop-opacity:0.6"></stop>
+          </linearGradient>
+          <marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="10"
+            refX="9"
+            refY="3"
+            orient="auto"
+          >
+            <polygon points="0 0, 10 3, 0 6" fill="var(--accent)"></polygon>
+          </marker>
+        </defs>
+        <line
+          class="connection-line line-1"
+          x1="300"
+          y1="200"
+          x2="150"
+          y2="100"
+          stroke="url(#lineGradient)"
+          stroke-width="2"
+          marker-end="url(#arrowhead)"></line>
+        <line
+          class="connection-line line-2"
+          x1="300"
+          y1="200"
+          x2="450"
+          y2="100"
+          stroke="url(#lineGradient)"
+          stroke-width="2"
+          marker-end="url(#arrowhead)"></line>
+        <line
+          class="connection-line line-3"
+          x1="300"
+          y1="200"
+          x2="150"
+          y2="300"
+          stroke="url(#lineGradient)"
+          stroke-width="2"
+          marker-end="url(#arrowhead)"></line>
+        <line
+          class="connection-line line-4"
+          x1="300"
+          y1="200"
+          x2="450"
+          y2="300"
+          stroke="url(#lineGradient)"
+          stroke-width="2"
+          marker-end="url(#arrowhead)"></line>
+      </svg>
+    </div>
+
+    <div class="integrations-list">
+      <div class="integration-item">
+        <div class="integration-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+            ></path>
+          </svg>
+        </div>
+        <h3 data-i18n="integrations.api">APIs REST & GraphQL</h3>
+        <p data-i18n="integrations.apiDesc">
+          Integración de múltiples APIs para sincronización de datos en tiempo
+          real
+        </p>
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+            ></path>
+          </svg>
+        </div>
+        <h3 data-i18n="integrations.whatsapp">WhatsApp Business API</h3>
+        <p data-i18n="integrations.whatsappDesc">
+          Automatización de mensajería y atención al cliente
+        </p>
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 data-i18n="integrations.crm">Sistemas CRM</h3>
+        <p data-i18n="integrations.crmDesc">
+          Integración con Salesforce, HubSpot y otras plataformas CRM
+        </p>
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3 data-i18n="integrations.ecommerce">E-commerce</h3>
+        <p data-i18n="integrations.ecommerceDesc">
+          Conexión con Shopify, WooCommerce y plataformas de pago
+        </p>
+      </div>
+    </div>
+      <div class="integration-list">
+        {
+          integrations.map((integration, index) => (
+            <div class="integration-badge">
+              <span class="integration-badge-text">{integration}</span>
+            </div>
+          ))
+        }
+      </div>
+  </div>
 </section>
 
 <style>
-	.integrations {
-		padding: 6rem 2rem;
-		background-color: var(--bg-primary);
-		position: relative;
-		overflow: hidden;
-	}
+  .integrations {
+    padding: 6rem 2rem;
+    background-color: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
 
-	.section-subtitle {
-		text-align: center;
-		font-size: 1.25rem;
-		color: var(--text-secondary);
-		margin-bottom: 4rem;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-	.integrations-visual {
-		position: relative;
-		width: 100%;
-		max-width: 600px;
-		height: 400px;
-		margin: 4rem auto;
-	}
+  .integrations-visual {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 2rem auto;
+  }
 
-	.platform-node {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-		z-index: 2;
-		animation: float 3s ease-in-out infinite;
-	}
+  .platform-node {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+    animation: float 3s ease-in-out infinite;
+  }
 
-	.platform-node:nth-child(2) { animation-delay: 0s; }
-	.platform-node:nth-child(3) { animation-delay: 0.5s; }
-	.platform-node:nth-child(4) { animation-delay: 1s; }
-	.platform-node:nth-child(5) { animation-delay: 1.5s; }
+  .platform-node:nth-child(2) {
+    animation-delay: 0s;
+  }
+  .platform-node:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  .platform-node:nth-child(4) {
+    animation-delay: 1s;
+  }
+  .platform-node:nth-child(5) {
+    animation-delay: 1.5s;
+  }
 
-	.node-center {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+  .node-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-	.node-top-left {
-		top: 10%;
-		left: 10%;
-	}
+  .node-top-left {
+    top: 10%;
+    left: 10%;
+  }
 
-	.node-top-right {
-		top: 10%;
-		right: 10%;
-	}
+  .node-top-right {
+    top: 10%;
+    right: 10%;
+  }
 
-	.node-bottom-left {
-		bottom: 10%;
-		left: 10%;
-	}
+  .node-bottom-left {
+    bottom: 10%;
+    left: 10%;
+  }
 
-	.node-bottom-right {
-		bottom: 10%;
-		right: 10%;
-	}
+  .node-bottom-right {
+    bottom: 10%;
+    right: 10%;
+  }
 
-	.platform-icon {
-		width: 80px;
-		height: 80px;
-		border-radius: 20px;
-		background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		position: relative;
-		overflow: hidden;
-	}
+  .platform-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      var(--accent-hover) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
 
-	.platform-icon::before {
-		content: '';
-		position: absolute;
-		top: -50%;
-		left: -50%;
-		width: 200%;
-		height: 200%;
-		background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-		animation: shine 3s infinite;
-	}
+  .platform-icon::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    animation: shine 3s infinite;
+  }
 
-	.platform-icon:hover {
-		transform: scale(1.1) rotate(5deg);
-		box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
-	}
+  .platform-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+  }
 
-	.platform-icon svg {
-		width: 40px;
-		height: 40px;
-		z-index: 1;
-		position: relative;
-	}
+  .platform-icon svg {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    position: relative;
+  }
 
-	.platform-icon.whatsapp {
-		background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-	}
+  .platform-icon.whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  }
 
-	.platform-icon.crm {
-		background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
-	}
+  .platform-icon.crm {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  }
 
-	.platform-name {
-		font-size: 0.875rem;
-		font-weight: 600;
-		color: var(--text-primary);
-		background-color: var(--card-bg);
-		padding: 0.25rem 0.75rem;
-		border-radius: 12px;
-		border: 1px solid var(--border);
-		white-space: nowrap;
-	}
+  .platform-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--card-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
 
-	.connections {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		pointer-events: none;
-	}
+  .connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
 
-	.connection-line {
-		stroke-dasharray: 1000;
-		stroke-dashoffset: 1000;
-		animation: drawLine 2s ease-in-out forwards;
-		opacity: 0.6;
-	}
+  .connection-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease-in-out forwards;
+    opacity: 0.6;
+  }
 
-	.connection-line.line-1 { animation-delay: 0.5s; }
-	.connection-line.line-2 { animation-delay: 0.7s; }
-	.connection-line.line-3 { animation-delay: 0.9s; }
-	.connection-line.line-4 { animation-delay: 1.1s; }
+  .connection-line.line-1 {
+    animation-delay: 0.5s;
+  }
+  .connection-line.line-2 {
+    animation-delay: 0.7s;
+  }
+  .connection-line.line-3 {
+    animation-delay: 0.9s;
+  }
+  .connection-line.line-4 {
+    animation-delay: 1.1s;
+  }
 
-	.integrations-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-		margin-top: 4rem;
-	}
+  .integrations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
 
-	.integration-item {
-		background-color: var(--card-bg);
-		border: 1px solid var(--border);
-		border-radius: 16px;
-		padding: 2rem;
-		text-align: center;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
+  .integration-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
 
-	.integration-item:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 40px var(--shadow);
-		border-color: var(--accent);
-	}
+  .integration-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px var(--shadow);
+    border-color: var(--accent);
+  }
 
-	.integration-icon {
-		width: 60px;
-		height: 60px;
-		margin: 0 auto 1rem;
-		border-radius: 12px;
-		background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-	}
+  .integration-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      var(--accent-hover) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
 
-	.integration-icon svg {
-		width: 30px;
-		height: 30px;
-	}
+  .integration-icon svg {
+    width: 30px;
+    height: 30px;
+  }
 
-	.integration-item h3 {
-		font-size: 1.25rem;
-		font-weight: 700;
-		color: var(--text-primary);
-		margin-bottom: 0.5rem;
-	}
+  .integration-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
 
-	.integration-item p {
-		font-size: 0.9rem;
-		color: var(--text-secondary);
-		line-height: 1.6;
-		margin: 0;
-	}
+  .integration-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
 
-	@keyframes float {
-		0%, 100% {
-			transform: translateY(0px);
-		}
-		50% {
-			transform: translateY(-10px);
-		}
-	}
+  .integration-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-	@keyframes drawLine {
-		to {
-			stroke-dashoffset: 0;
-		}
-	}
+  .integration-badge {
+    /*aspect-ratio: 1;*/
+    background-color: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
 
-	@keyframes shine {
-		0% {
-			transform: translateX(-100%) translateY(-100%) rotate(45deg);
-		}
-		100% {
-			transform: translateX(100%) translateY(100%) rotate(45deg);
-		}
-	}
+  .integration-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
 
-	@media (max-width: 768px) {
-		.integrations-visual {
-			height: 300px;
-		}
+  .integration-badge:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px var(--shadow);
+    border-color: var(--accent);
+    background-color: var(--bg-secondary);
+  }
 
-		.platform-icon {
-			width: 60px;
-			height: 60px;
-		}
+  .integration-badge:hover::before {
+    left: 100%;
+  }
 
-		.platform-icon svg {
-			width: 30px;
-			height: 30px;
-		}
+  .integration-badge-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    line-height: 1.3;
+    word-break: break-word;
+  }
 
-		.platform-name {
-			font-size: 0.75rem;
-			padding: 0.2rem 0.5rem;
-		}
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-		.integrations-list {
-			grid-template-columns: 1fr;
-		}
-	}
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes drawLine {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .integrations-visual {
+      height: 300px;
+    }
+
+    .platform-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .platform-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .platform-name {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+    }
+
+    .integrations-list {
+      grid-template-columns: 1fr;
+    }
+
+    .integration-list {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .integration-badge {
+      padding: 0.75rem;
+    }
+
+    .integration-badge-text {
+      font-size: 0.75rem;
+    }
+  }
 </style>
-
