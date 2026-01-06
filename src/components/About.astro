@@ -1,165 +1,177 @@
 ---
-import { getTranslations, getDefaultLanguage } from '../i18n/utils';
+import { getTranslations, getDefaultLanguage } from "../i18n/utils";
 
 const currentLang = getDefaultLanguage();
 const t = getTranslations(currentLang);
 ---
 
 <section id="about" class="about">
-	<div class="container">
-		<h2 class="section-title" data-i18n="about.title">{t.about.title}</h2>
-		<div class="about-content">
-			<div class="about-text">
-				<p data-i18n="about.paragraph1">
-					{t.about.paragraph1}
-				</p>
-				<p data-i18n="about.paragraph2">
-					{t.about.paragraph2}
-				</p>
-				<div class="about-stats">
-					<div class="stat">
-						<h3>50+</h3>
-						<p data-i18n="about.projectsCompleted">{t.about.projectsCompleted}</p>
-					</div>
-					<div class="stat">
-						<h3>3+</h3>
-						<p data-i18n="about.yearsExperience">{t.about.yearsExperience}</p>
-					</div>
-					<div class="stat">
-						<h3>20+</h3>
-						<p data-i18n="about.happyClients">{t.about.happyClients}</p>
-					</div>
-				</div>
-			</div>
-			<div class="about-image">
-				<div class="image-placeholder">
-						<img src="https://ucarecdn.com/d08c48c3-476a-4df5-aacd-8a59624062cc/" alt="My picture" class="hero-image-img" />
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <h2 class="section-title" data-i18n="about.title">{t.about.title}</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p data-i18n="about.paragraph1">
+          {t.about.paragraph1}
+        </p>
+        <p data-i18n="about.paragraph2">
+          {t.about.paragraph2}
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <h3>50+</h3>
+            <p data-i18n="about.projectsCompleted">
+              {t.about.projectsCompleted}
+            </p>
+          </div>
+          <div class="stat">
+            <h3>3+</h3>
+            <p data-i18n="about.yearsExperience">{t.about.yearsExperience}</p>
+          </div>
+          <div class="stat">
+            <h3>20+</h3>
+            <p data-i18n="about.happyClients">{t.about.happyClients}</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <div class="image-placeholder">
+          <img
+            src="https://ucarecdn.com/2814f1c8-8794-4b6e-812b-d0b7e47196a2/profile_picture2_web.webp"
+            alt="My picture"
+            class="hero-image-img"
+            fetchpriority="high"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
-	.about {
-		padding: 6rem 2rem;
-		background-color: var(--bg-secondary);
-	}
+  .about {
+    padding: 6rem 2rem;
+    background-color: var(--bg-secondary);
+  }
 
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-	.section-title {
-		font-size: clamp(2rem, 4vw, 3rem);
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: 4rem;
-		color: var(--text-primary);
-		position: relative;
-		display: inline-block;
-		width: 100%;
-	}
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
 
-	.section-title::after {
-		content: '';
-		position: absolute;
-		bottom: -10px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 80px;
-		height: 4px;
-		background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
-		border-radius: 2px;
-	}
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      var(--accent-hover) 100%
+    );
+    border-radius: 2px;
+  }
 
-	.about-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
-		align-items: center;
-	}
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
 
-	.about-text p {
-		font-size: 1.125rem;
-		line-height: 1.8;
-		color: var(--text-secondary);
-		margin-bottom: 1.5rem;
-	}
+  .about-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
 
-	.about-stats {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2rem;
-		margin-top: 3rem;
-	}
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
 
-	.stat {
-		text-align: center;
-		padding: 1.5rem;
-		background-color: var(--card-bg);
-		border-radius: 12px;
-		border: 1px solid var(--border);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
+  .stat {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
 
-	.stat:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 30px var(--shadow);
-	}
+  .stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+  }
 
-	.stat h3 {
-		font-size: 2.5rem;
-		font-weight: 700;
-		color: var(--accent);
-		margin-bottom: 0.5rem;
-	}
+  .stat h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
 
-	.stat p {
-		font-size: 0.9rem;
-		color: var(--text-secondary);
-		margin: 0;
-	}
+  .stat p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
 
-	.about-image {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.image-placeholder {
-		width: 100%;
-		max-width: 400px;
-		aspect-ratio: 1;
-		/*background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);*/
-		border-radius: 20px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		box-shadow: 0 20px 60px var(--shadow);
-	}
+  .image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    /*background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);*/
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 20px 60px var(--shadow);
+  }
 
-	.image-placeholder svg {
-		width: 150px;
-		height: 150px;
-	}
+  .image-placeholder svg {
+    width: 150px;
+    height: 150px;
+  }
 
-	img.hero-image-img {
-    width: 77%;
-	opacity: .8;
-}
+  img.hero-image-img {
+    width: 89%;
+    opacity: 0.8;
+  }
 
-	@media (max-width: 968px) {
-		.about-content {
-			grid-template-columns: 1fr;
-		}
+  @media (max-width: 968px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
 
-		.about-stats {
-			grid-template-columns: 1fr;
-		}
-	}
+    .about-stats {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
-
-
