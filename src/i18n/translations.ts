@@ -98,8 +98,8 @@ export const translations: Record<Language, Translations> = {
 		},
 		about: {
 			title: 'Sobre Mí',
-			paragraph1: 'Soy un desarrollador apasionado por la tecnología y la creación de soluciones innovadoras. Me especializo en desarrollo full stack, creando aplicaciones web modernas y eficientes.',
-			paragraph2: 'Mi objetivo es combinar diseño atractivo con funcionalidad robusta, siempre buscando las mejores prácticas y las tecnologías más actuales para ofrecer experiencias excepcionales.',
+			paragraph1: 'LLevo ya varios años siendo Desarrollador de Software. Amo lo que hago. Me encanta encontrar soluciones a cualquier situación que lo requiera.',
+			paragraph2: 'Uno de mis puntos fuertes son las integraciones entre muchas aplicaciones. He logrado realizar muchas de ellas, tanto en el frontend como en el backend.',
 			projectsCompleted: 'Proyectos Completados',
 			yearsExperience: 'Años de Experiencia',
 			happyClients: 'Clientes Satisfechos',
@@ -107,16 +107,16 @@ export const translations: Record<Language, Translations> = {
 		projects: {
 			title: 'Proyectos',
 			project1: {
-				title: 'Proyecto 1',
-				description: 'Una aplicación web moderna con funcionalidades avanzadas y diseño responsivo.',
+				title: 'Portfolio con Next JS',
+				description: 'Portfolio personal creado con Next JS y Tailwind CSS y desplegado en github pages',
 			},
 			project2: {
-				title: 'Proyecto 2',
-				description: 'Plataforma de e-commerce con sistema de pagos integrado y panel de administración.',
+				title: 'knoU',
+				description: 'Aplicación de citas creada con React y Express y desplegada en Netlify',
 			},
 			project3: {
-				title: 'Proyecto 3',
-				description: 'Aplicación móvil para gestión de tareas con sincronización en tiempo real.',
+				title: 'Image seeker',
+				description: 'Aplicación para buscar imagenes gratuitas con API de pixabay',
 			},
 			project4: {
 				title: 'Proyecto 4',
@@ -175,8 +175,8 @@ export const translations: Record<Language, Translations> = {
 		},
 		about: {
 			title: 'About Me',
-			paragraph1: 'I am a developer passionate about technology and creating innovative solutions. I specialize in full stack development, creating modern and efficient web applications.',
-			paragraph2: 'My goal is to combine attractive design with robust functionality, always seeking best practices and the latest technologies to deliver exceptional experiences.',
+			paragraph1: 'I have been a software developer for several years. I love what I do. I love finding solutions to any situation that requires it.',
+			paragraph2: 'One of my strengths is the integrations between many applications. I have achieved many of them, both in the frontend and the backend.',
 			projectsCompleted: 'Completed Projects',
 			yearsExperience: 'Years of Experience',
 			happyClients: 'Happy Clients',
@@ -184,8 +184,8 @@ export const translations: Record<Language, Translations> = {
 		projects: {
 			title: 'Projects',
 			project1: {
-				title: 'Project 1',
-				description: 'A modern web application with advanced features and responsive design.',
+				title: 'Portfolio with Next JS',
+				description: 'Personal portfolio created with Next JS and Tailwind CSS and deployed on github pages',
 			},
 			project2: {
 				title: 'Project 2',
@@ -252,8 +252,8 @@ export const translations: Record<Language, Translations> = {
 		},
 		about: {
 			title: 'Chi Sono',
-			paragraph1: 'Sono uno sviluppatore appassionato di tecnologia e creazione di soluzioni innovative. Mi specializzo nello sviluppo full stack, creando applicazioni web moderne ed efficienti.',
-			paragraph2: 'Il mio obiettivo è combinare un design accattivante con funzionalità robuste, cercando sempre le migliori pratiche e le tecnologie più attuali per offrire esperienze eccezionali.',
+			paragraph1: 'Ho lavorato come sviluppatore software per diversi anni. Amo ciò che faccio. Amo trovare soluzioni per qualsiasi situazione che lo richiede.',
+			paragraph2: 'Uno dei miei punti forti è l\'integrazione tra molte applicazioni. Ho realizzato molte di esse, sia nel frontend che nel backend.',
 			projectsCompleted: 'Progetti Completati',
 			yearsExperience: 'Anni di Esperienza',
 			happyClients: 'Clienti Soddisfatti',
@@ -261,16 +261,16 @@ export const translations: Record<Language, Translations> = {
 		projects: {
 			title: 'Progetti',
 			project1: {
-				title: 'Progetto 1',
-				description: 'Un\'applicazione web moderna con funzionalità avanzate e design responsive.',
+				title: 'Portfolio con Next JS',
+				description: 'Portfolio personale creato con Next JS e Tailwind CSS e deployato su github pages',
 			},
 			project2: {
-				title: 'Progetto 2',
-				description: 'Piattaforma e-commerce con sistema di pagamento integrato e pannello di amministrazione.',
+				title: 'knoU',
+				description: 'Applicazione di date matching creata con React e Express e deployata su Netlify',
 			},
 			project3: {
-				title: 'Progetto 3',
-				description: 'Applicazione mobile per la gestione delle attività con sincronizzazione in tempo reale.',
+				title: 'Image seeker',
+				description: 'Applicazione per la ricerca di immagini gratuite con API di pixabay',
 			},
 			project4: {
 				title: 'Progetto 4',

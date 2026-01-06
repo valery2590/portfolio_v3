@@ -1,665 +1,784 @@
 ---
-import { getTranslations, getDefaultLanguage, setLanguage } from '../i18n/utils';
-import type { Language } from '../i18n/translations';
+import {
+  getTranslations,
+  getDefaultLanguage,
+  setLanguage,
+} from "../i18n/utils";
+import type { Language } from "../i18n/translations";
 
 const currentLang = getDefaultLanguage();
 const t = getTranslations(currentLang);
 ---
 
 <header class="header">
-	<nav class="nav">
-		<div class="logo">
-			<a href="#home">VFH</a>
-		</div>
-		<ul class="nav-links" id="nav-links">
-			<li><a href="#home" data-i18n="nav.home">{t.nav.home}</a></li>
-			<li><a href="#about" data-i18n="nav.about">{t.nav.about}</a></li>
-			<li><a href="#projects" data-i18n="nav.projects">{t.nav.projects}</a></li>
-			<li><a href="#integrations" data-i18n="nav.integrations">{t.nav.integrations}</a></li>
-			<li><a href="#contact" data-i18n="nav.contact">{t.nav.contact}</a></li>
-		</ul>
-		<div class="header-controls">
-			<div class="language-selector">
-				<button class="language-toggle" id="language-toggle" aria-label="Select language">
-					<span class="current-flag" id="current-flag">🇪🇸</span>
-				</button>
-				<div class="language-menu" id="language-menu">
-					<button 
-						class="language-option" 
-						data-lang="es"
-						aria-label="Español"
-					>
-						🇪🇸 Español
-					</button>
-					<button 
-						class="language-option" 
-						data-lang="en"
-						aria-label="English"
-					>
-						🇬🇧 English
-					</button>
-					<button 
-						class="language-option" 
-						data-lang="it"
-						aria-label="Italiano"
-					>
-						🇮🇹 Italiano
-					</button>
-				</div>
-			</div>
-			<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-				<svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<circle cx="12" cy="12" r="5"></circle>
-					<line x1="12" y1="1" x2="12" y2="3"></line>
-					<line x1="12" y1="21" x2="12" y2="23"></line>
-					<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-					<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-					<line x1="1" y1="12" x2="3" y2="12"></line>
-					<line x1="21" y1="12" x2="23" y2="12"></line>
-					<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-					<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-				</svg>
-				<svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-				</svg>
-			</button>
-			<button class="mobile-menu-toggle" aria-label="Toggle menu">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-		</div>
-	</nav>
+  <nav class="nav">
+    <div class="logo">
+      <a href="#home">VFH</a>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" data-i18n="nav.home">{t.nav.home}</a></li>
+      <li><a href="#about" data-i18n="nav.about">{t.nav.about}</a></li>
+      <li>
+        <a href="#integrations" data-i18n="nav.integrations"
+          >{t.nav.integrations}</a
+        >
+      </li>
+      <li><a href="#projects" data-i18n="nav.projects">{t.nav.projects}</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">{t.nav.contact}</a></li>
+    </ul>
+    <div class="header-controls">
+      <div class="language-selector">
+        <button
+          class="language-toggle"
+          id="language-toggle"
+          aria-label="Select language"
+        >
+          <span class="current-flag" id="current-flag">🇪🇸</span>
+        </button>
+        <div class="language-menu" id="language-menu">
+          <button class="language-option" data-lang="es" aria-label="Español">
+            🇪🇸 Español
+          </button>
+          <button class="language-option" data-lang="en" aria-label="English">
+            🇬🇧 English
+          </button>
+          <button class="language-option" data-lang="it" aria-label="Italiano">
+            🇮🇹 Italiano
+          </button>
+        </div>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg
+          class="sun-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="moon-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 </header>
 
 <style>
-	.header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		background-color: var(--bg-primary);
-		border-bottom: 1px solid var(--border);
-		z-index: 1000;
-		transition: background-color 0.3s ease, border-color 0.3s ease;
-		backdrop-filter: blur(10px);
-	}
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
 
-	[data-theme="dark"] .header {
-		background-color: rgba(15, 23, 42, 0.8);
-	}
+  [data-theme="dark"] .header {
+    background-color: rgba(15, 23, 42, 0.8);
+  }
 
-	.nav {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 1rem 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  .nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-	.logo a {
-		font-size: 1.5rem;
-		font-weight: 700;
-		color: var(--accent);
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
 
-	.logo a:hover {
-		color: var(--accent-hover);
-	}
+  .logo a:hover {
+    color: var(--accent-hover);
+  }
 
-	.nav-links {
-		display: flex;
-		list-style: none;
-		gap: 2rem;
-		align-items: center;
-	}
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+  }
 
-	.nav-links a {
-		color: var(--text-primary);
-		text-decoration: none;
-		font-weight: 500;
-		transition: color 0.3s ease;
-		position: relative;
-	}
+  .nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
 
-	.nav-links a:hover {
-		color: var(--accent);
-	}
+  .nav-links a:hover {
+    color: var(--accent);
+  }
 
-	.nav-links a::after {
-		content: '';
-		position: absolute;
-		bottom: -5px;
-		left: 0;
-		width: 0;
-		height: 2px;
-		background-color: var(--accent);
-		transition: width 0.3s ease;
-	}
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
 
-	.nav-links a:hover::after {
-		width: 100%;
-	}
+  .nav-links a:hover::after {
+    width: 100%;
+  }
 
-	.header-controls {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-	}
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 
-	.language-selector {
-		position: relative;
-	}
+  .language-selector {
+    position: relative;
+  }
 
-	.language-toggle {
-		background: none;
-		border: 2px solid var(--border);
-		border-radius: 8px;
-		width: 50px;
-		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		font-size: 1.5rem;
-	}
+  .language-toggle {
+    background: none;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+  }
 
-	.language-toggle:hover {
-		border-color: var(--accent);
-		transform: scale(1.05);
-	}
+  .language-toggle:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+  }
 
-	.language-menu {
-		position: absolute;
-		top: calc(100% + 10px);
-		right: 0;
-		background-color: var(--card-bg);
-		border: 1px solid var(--border);
-		border-radius: 12px;
-		padding: 0.5rem;
-		min-width: 150px;
-		box-shadow: 0 10px 40px var(--shadow);
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(-10px);
-		transition: all 0.3s ease;
-		z-index: 1001;
-	}
+  .language-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.5rem;
+    min-width: 150px;
+    box-shadow: 0 10px 40px var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+  }
 
-	.language-menu.active {
-		opacity: 1;
-		visibility: visible;
-		transform: translateY(0);
-	}
+  .language-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 
-	.language-option {
-		width: 100%;
-		padding: 0.75rem 1rem;
-		background: none;
-		border: none;
-		border-radius: 8px;
-		cursor: pointer;
-		text-align: left;
-		color: var(--text-primary);
-		font-size: 1rem;
-		transition: background-color 0.3s ease;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-	}
+  .language-option {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 
-	.language-option:hover {
-		background-color: var(--bg-secondary);
-	}
+  .language-option:hover {
+    background-color: var(--bg-secondary);
+  }
 
-	.language-option.active {
-		background-color: var(--accent);
-		color: white;
-	}
+  .language-option.active {
+    background-color: var(--accent);
+    color: white;
+  }
 
-	.theme-toggle {
-		background: none;
-		border: 2px solid var(--border);
-		border-radius: 50%;
-		width: 40px;
-		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		color: var(--text-primary);
-		position: relative;
-	}
+  .theme-toggle {
+    background: none;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    position: relative;
+  }
 
-	.theme-toggle:hover {
-		border-color: var(--accent);
-		color: var(--accent);
-		transform: rotate(15deg);
-	}
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: rotate(15deg);
+  }
 
-	.moon-icon {
-		display: none;
-	}
+  .moon-icon {
+    display: none;
+  }
 
-	[data-theme="dark"] .sun-icon {
-		display: none;
-	}
+  [data-theme="dark"] .sun-icon {
+    display: none;
+  }
 
-	[data-theme="dark"] .moon-icon {
-		display: block;
-	}
+  [data-theme="dark"] .moon-icon {
+    display: block;
+  }
 
-	.mobile-menu-toggle {
-		display: none;
-		flex-direction: column;
-		gap: 5px;
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 5px;
-	}
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
 
-	.mobile-menu-toggle span {
-		width: 25px;
-		height: 3px;
-		background-color: var(--text-primary);
-		border-radius: 3px;
-		transition: all 0.3s ease;
-	}
+  .mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
 
-	@media (max-width: 768px) {
-		.nav {
-			padding: 1rem;
-		}
+  @media (max-width: 768px) {
+    .nav {
+      padding: 1rem;
+    }
 
-		.nav-links {
-			position: fixed;
-			top: 70px;
-			left: 0;
-			right: 0;
-			background-color: var(--bg-primary);
-			flex-direction: column;
-			padding: 2rem;
-			gap: 1.5rem;
-			border-bottom: 1px solid var(--border);
-			transform: translateY(-100%);
-			opacity: 0;
-			pointer-events: none;
-			transition: all 0.3s ease;
-		}
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: var(--bg-primary);
+      flex-direction: column;
+      padding: 2rem;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
 
-		.nav-links.active {
-			transform: translateY(0);
-			opacity: 1;
-			pointer-events: all;
-		}
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
 
-		.mobile-menu-toggle {
-			display: flex;
-		}
+    .mobile-menu-toggle {
+      display: flex;
+    }
 
-		.language-menu {
-			right: auto;
-			left: 0;
-		}
-	}
+    .language-menu {
+      right: auto;
+      left: 0;
+    }
+  }
 </style>
 
 <script>
-	// Type declarations for global window properties
-	declare global {
-		interface Window {
-			translations?: typeof translations;
-			currentLanguage?: Language;
-		}
-	}
+  // Type declarations for global window properties
+  declare global {
+    interface Window {
+      translations?: typeof translations;
+      currentLanguage?: Language;
+    }
+  }
 
-	// All translations for client-side updates
-	const translations = {
-		es: {
-			nav: { home: 'Inicio', about: 'Sobre mí', integrations: 'Integraciones', projects: 'Proyectos', skills: 'Habilidades', contact: 'Contacto' },
-			hero: {
-				greeting: 'Hola, soy',
-				name: 'Valery',
-				title: 'Solutions developer',
-				description: 'Apasionado por crear soluciones digitales innovadoras y experiencias de usuario excepcionales.',
-				viewProjects: 'Ver Proyectos',
-				contact: 'Contactar',
-			},
-			about: {
-				title: 'Sobre Mí',
-				paragraph1: 'Soy un desarrollador apasionado por la tecnología y la creación de soluciones innovadoras. Me especializo en desarrollo full stack, creando aplicaciones web modernas y eficientes.',
-				paragraph2: 'Mi objetivo es combinar diseño atractivo con funcionalidad robusta, siempre buscando las mejores prácticas y las tecnologías más actuales para ofrecer experiencias excepcionales.',
-				projectsCompleted: 'Proyectos Completados',
-				yearsExperience: 'Años de Experiencia',
-				happyClients: 'Clientes Satisfechos',
-			},
-			projects: {
-				title: 'Proyectos',
-				project1: { title: 'Proyecto 1', description: 'Una aplicación web moderna con funcionalidades avanzadas y diseño responsivo.' },
-				project2: { title: 'Proyecto 2', description: 'Plataforma de e-commerce con sistema de pagos integrado y panel de administración.' },
-				project3: { title: 'Proyecto 3', description: 'Aplicación móvil para gestión de tareas con sincronización en tiempo real.' },
-				project4: { title: 'Proyecto 4', description: 'Dashboard analítico con visualizaciones interactivas y reportes personalizados.' },
-			},
-			skills: {
-				title: 'Habilidades',
-				frontend: 'Frontend',
-				backend: 'Backend',
-				tools: 'Herramientas',
-			},
-			contact: {
-				title: 'Contacto',
-				subtitle: '¿Tienes un proyecto en mente?',
-				description: 'Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones.',
-				name: 'Nombre',
-				email: 'Email',
-				message: 'Mensaje',
-				sendMessage: 'Enviar Mensaje',
-				successMessage: '¡Gracias por tu mensaje! Te contactaré pronto.',
-			},
-			integrations: {
-				title: 'Integraciones',
-				subtitle: 'Integraciones entre CRM, E-commerce, WhatsApp y más',
-				api: 'APIs REST & GraphQL',
-				apiDesc: 'Integración de múltiples APIs para sincronización de datos en tiempo real',
-				whatsapp: 'WhatsApp Business API',
-				whatsappDesc: 'Automatización de mensajería y atención al cliente',
-				crm: 'Sistemas CRM',
-				crmDesc: 'Integración con Salesforce, HubSpot y otras plataformas CRM',
-				ecommerce: 'E-commerce',
-				ecommerceDesc: 'Conexión con Shopify, WooCommerce y plataformas de pago',
-			},
-			footer: {
-				copyright: '© 2026 Valery Figueroa. Todos los derechos reservados.',
-			},
-		},
-		en: {
-			nav: { home: 'Home', about: 'About', integrations: 'Integrations', projects: 'Projects', skills: 'Skills', contact: 'Contact' },
-			hero: {
-				greeting: 'Hi, I am',
-				name: 'Valery',
-				title: 'Solutions developer',
-				description: 'Passionate about creating innovative digital solutions and exceptional user experiences.',
-				viewProjects: 'View Projects',
-				contact: 'Contact',
-			},
-			about: {
-				title: 'About Me',
-				paragraph1: 'I am a developer passionate about technology and creating innovative solutions. I specialize in full stack development, creating modern and efficient web applications.',
-				paragraph2: 'My goal is to combine attractive design with robust functionality, always seeking best practices and the latest technologies to deliver exceptional experiences.',
-				projectsCompleted: 'Completed Projects',
-				yearsExperience: 'Years of Experience',
-				happyClients: 'Happy Clients',
-			},
-			projects: {
-				title: 'Projects',
-				project1: { title: 'Project 1', description: 'A modern web application with advanced features and responsive design.' },
-				project2: { title: 'Project 2', description: 'E-commerce platform with integrated payment system and admin panel.' },
-				project3: { title: 'Project 3', description: 'Mobile application for task management with real-time synchronization.' },
-				project4: { title: 'Project 4', description: 'Analytical dashboard with interactive visualizations and custom reports.' },
-			},
-			skills: {
-				title: 'Skills',
-				frontend: 'Frontend',
-				backend: 'Backend',
-				tools: 'Tools',
-			},
-			contact: {
-				title: 'Contact',
-				subtitle: 'Have a project in mind?',
-				description: 'I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.',
-				name: 'Name',
-				email: 'Email',
-				message: 'Message',
-				sendMessage: 'Send Message',
-				successMessage: 'Thank you for your message! I will contact you soon.',
-			},
-			integrations: {
-				title: 'Integrations',
-				subtitle: 'Integrations between CRM, E-commerce, WhatsApp and more',
-				api: 'REST & GraphQL APIs',
-				apiDesc: 'Integration of multiple APIs for real-time data synchronization',
-				whatsapp: 'WhatsApp Business API',
-				whatsappDesc: 'Messaging automation and customer service',
-				crm: 'CRM Systems',
-				crmDesc: 'Integration with Salesforce, HubSpot and other CRM platforms',
-				ecommerce: 'E-commerce',
-				ecommerceDesc: 'Connection with Shopify, WooCommerce and payment platforms',
-				listTitle: 'List of integrations I have worked on',
-			},
-			footer: {
-				copyright: '© 2026 Valery Figueroa. All rights reserved.',
-			},
-		},
-		it: {
-			nav: { home: 'Home', about: 'Chi Sono', integrations: 'Integrazioni', projects: 'Progetti', skills: 'Competenze', contact: 'Contatto' },
-			hero: {
-				greeting: 'Ciao, sono',
-				name: 'Valery',
-				title: 'Solutions developer',
-				description: 'Appassionato di creare soluzioni digitali innovative ed esperienze utente eccezionali.',
-				viewProjects: 'Vedi Progetti',
-				contact: 'Contatta',
-			},
-			about: {
-				title: 'Chi Sono',
-				paragraph1: 'Sono uno sviluppatore appassionato di tecnologia e creazione di soluzioni innovative. Mi specializzo nello sviluppo full stack, creando applicazioni web moderne ed efficienti.',
-				paragraph2: 'Il mio obiettivo è combinare un design accattivante con funzionalità robuste, cercando sempre le migliori pratiche e le tecnologie più attuali per offrire esperienze eccezionali.',
-				projectsCompleted: 'Progetti Completati',
-				yearsExperience: 'Anni di Esperienza',
-				happyClients: 'Clienti Soddisfatti',
-			},
-			projects: {
-				title: 'Progetti',
-				project1: { title: 'Progetto 1', description: 'Un\'applicazione web moderna con funzionalità avanzate e design responsive.' },
-				project2: { title: 'Progetto 2', description: 'Piattaforma e-commerce con sistema di pagamento integrato e pannello di amministrazione.' },
-				project3: { title: 'Progetto 3', description: 'Applicazione mobile per la gestione delle attività con sincronizzazione in tempo reale.' },
-				project4: { title: 'Progetto 4', description: 'Dashboard analitico con visualizzazioni interattive e report personalizzati.' },
-			},
-			skills: {
-				title: 'Competenze',
-				frontend: 'Frontend',
-				backend: 'Backend',
-				tools: 'Strumenti',
-			},
-			contact: {
-				title: 'Contatto',
-				subtitle: 'Hai un progetto in mente?',
-				description: 'Sono sempre aperto a discutere nuovi progetti, idee creative o opportunità per far parte delle tue visioni.',
-				name: 'Nome',
-				email: 'Email',
-				message: 'Messaggio',
-				sendMessage: 'Invia Messaggio',
-				successMessage: 'Grazie per il tuo messaggio! Ti contatterò presto.',
-			},
-			integrations: {
-				title: 'Integrazioni',
-				subtitle: 'Integrazioni tra CRM, E-commerce, WhatsApp e altro',
-				api: 'API REST & GraphQL',
-				apiDesc: 'Integrazione di multiple API per sincronizzazione dati in tempo reale',
-				whatsapp: 'WhatsApp Business API',
-				whatsappDesc: 'Automazione messaggistica e assistenza clienti',
-				crm: 'Sistemi CRM',
-				crmDesc: 'Integrazione con Salesforce, HubSpot e altre piattaforme CRM',
-				ecommerce: 'E-commerce',
-				ecommerceDesc: 'Connessione con Shopify, WooCommerce e piattaforme di pagamento',
-				listTitle: 'Lista di integrazioni che ho lavorato',
-			},
-			footer: {
-				copyright: '© 2026 Valery Figueroa. Tutti i diritti riservati.',
-			},
-		},
-	};
+  // All translations for client-side updates
+  const translations = {
+    es: {
+      nav: {
+        home: "Inicio",
+        about: "Sobre mí",
+        integrations: "Integraciones",
+        projects: "Proyectos",
+        skills: "Habilidades",
+        contact: "Contacto",
+      },
+      hero: {
+        greeting: "Hola, soy",
+        name: "Valery",
+        title: "Solutions developer",
+        description:
+          "Apasionado por crear soluciones digitales innovadoras y experiencias de usuario excepcionales.",
+        viewProjects: "Ver Proyectos",
+        contact: "Contactar",
+      },
+      about: {
+        title: "Sobre Mí",
+        paragraph1:
+          "LLevo ya varios años siendo Desarrollador de Software. Amo lo que hago. Me encanta encontrar soluciones a cualquier situación que lo requiera.",
+        paragraph2:
+          "Uno de mis puntos fuertes son las integraciones entre muchas aplicaciones. He logrado realizar muchas de ellas, tanto en el frontend como en el backend.",
+        projectsCompleted: "Proyectos Completados",
+        yearsExperience: "Años de Experiencia",
+        happyClients: "Clientes Satisfechos",
+      },
+      projects: {
+        title: "Proyectos (2020-2022)",
+        project1: {
+          title: "Portfolio con Next JS",
+          description:
+            "Portfolio personal creado con Next JS y Tailwind CSS y desplegado en github pages",
+        },
+        project2: {
+          title: "knoU",
+          description:
+            "Aplicación de citas creada con React y Express y desplegada en Netlify",
+        },
+        project3: {
+          title: "Image seeker",
+          description:
+            "Aplicación para buscar imagenes gratuitas con API de pixabay",
+        },
+        project4: {
+          title: "Proyecto 4",
+          description:
+            "Dashboard analítico con visualizaciones interactivas y reportes personalizados.",
+        },
+      },
+      skills: {
+        title: "Habilidades",
+        frontend: "Frontend",
+        backend: "Backend",
+        tools: "Herramientas",
+      },
+      contact: {
+        title: "Contacto",
+        subtitle: "¿Tienes un proyecto en mente?",
+        description:
+          "Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones.",
+        name: "Nombre",
+        email: "Email",
+        message: "Mensaje",
+        sendMessage: "Enviar Mensaje",
+        successMessage: "¡Gracias por tu mensaje! Te contactaré pronto.",
+      },
+      integrations: {
+        title: "Integraciones",
+        subtitle: "Integraciones entre CRM, E-commerce, WhatsApp y más",
+        api: "APIs REST & GraphQL",
+        apiDesc:
+          "Integración de múltiples APIs para sincronización de datos en tiempo real",
+        whatsapp: "WhatsApp Business API",
+        whatsappDesc: "Automatización de mensajería y atención al cliente",
+        crm: "Sistemas CRM",
+        crmDesc: "Integración con Salesforce, HubSpot y otras plataformas CRM",
+        ecommerce: "E-commerce",
+        ecommerceDesc:
+          "Conexión con Shopify, WooCommerce y plataformas de pago",
+      },
+      footer: {
+        copyright: "© 2026 Valery Figueroa. Todos los derechos reservados.",
+      },
+    },
+    en: {
+      nav: {
+        home: "Home",
+        about: "About",
+        integrations: "Integrations",
+        projects: "Projects",
+        skills: "Skills",
+        contact: "Contact",
+      },
+      hero: {
+        greeting: "Hi, I am",
+        name: "Valery",
+        title: "Solutions developer",
+        description:
+          "Passionate about creating innovative digital solutions and exceptional user experiences.",
+        viewProjects: "View Projects",
+        contact: "Contact",
+      },
+      about: {
+        title: "About Me",
+        paragraph1:
+          "I am a developer passionate about technology and creating innovative solutions. I specialize in full stack development, creating modern and efficient web applications.",
+        paragraph2:
+          "My goal is to combine attractive design with robust functionality, always seeking best practices and the latest technologies to deliver exceptional experiences.",
+        projectsCompleted: "Completed Projects",
+        yearsExperience: "Years of Experience",
+        happyClients: "Happy Clients",
+      },
+      projects: {
+        title: "Projects (2020-2022)",
+        project1: {
+          title: "Portfolio with Next JS",
+          description:
+            "Personal portfolio created with Next JS and Tailwind CSS and deployed on github pages",
+        },
+        project2: {
+          title: "knoU",
+          description:
+            "Date matching application created with React and Express and deployed on Netlify",
+        },
+        project3: {
+          title: "Image seeker",
+          description: "Application to search for free images with pixabay API",
+        },
+        project4: {
+          title: "Project 4",
+          description:
+            "Analytical dashboard with interactive visualizations and custom reports.",
+        },
+      },
+      skills: {
+        title: "Skills",
+        frontend: "Frontend",
+        backend: "Backend",
+        tools: "Tools",
+      },
+      contact: {
+        title: "Contact",
+        subtitle: "Have a project in mind?",
+        description:
+          "I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        sendMessage: "Send Message",
+        successMessage: "Thank you for your message! I will contact you soon.",
+      },
+      integrations: {
+        title: "Integrations",
+        subtitle: "Integrations between CRM, E-commerce, WhatsApp and more",
+        api: "REST & GraphQL APIs",
+        apiDesc:
+          "Integration of multiple APIs for real-time data synchronization",
+        whatsapp: "WhatsApp Business API",
+        whatsappDesc: "Messaging automation and customer service",
+        crm: "CRM Systems",
+        crmDesc: "Integration with Salesforce, HubSpot and other CRM platforms",
+        ecommerce: "E-commerce",
+        ecommerceDesc:
+          "Connection with Shopify, WooCommerce and payment platforms",
+        listTitle: "List of integrations I have worked on",
+      },
+      footer: {
+        copyright: "© 2026 Valery Figueroa. All rights reserved.",
+      },
+    },
+    it: {
+      nav: {
+        home: "Home",
+        about: "Chi Sono",
+        integrations: "Integrazioni",
+        projects: "Progetti",
+        skills: "Competenze",
+        contact: "Contatto",
+      },
+      hero: {
+        greeting: "Ciao, sono",
+        name: "Valery",
+        title: "Solutions developer",
+        description:
+          "Appassionato di creare soluzioni digitali innovative ed esperienze utente eccezionali.",
+        viewProjects: "Vedi Progetti",
+        contact: "Contatta",
+      },
+      about: {
+        title: "Chi Sono",
+        paragraph1:
+          "Sono uno sviluppatore appassionato di tecnologia e creazione di soluzioni innovative. Mi specializzo nello sviluppo full stack, creando applicazioni web moderne ed efficienti.",
+        paragraph2:
+          "Il mio obiettivo è combinare un design accattivante con funzionalità robuste, cercando sempre le migliori pratiche e le tecnologie più attuali per offrire esperienze eccezionali.",
+        projectsCompleted: "Progetti Completati",
+        yearsExperience: "Anni di Esperienza",
+        happyClients: "Clienti Soddisfatti",
+      },
+      projects: {
+        title: "Progetti (2020-2022)",
+        project1: {
+          title: "Portfolio con Next JS",
+          description:
+            "Portfolio personale creato con Next JS e Tailwind CSS e deployato su github pages",
+        },
+        project2: {
+          title: "knoU",
+          description:
+            "Applicazione di date matching creata con React e Express e deployata su Netlify",
+        },
+        project3: {
+          title: "Image seeker",
+          description:
+            "Applicazione per la ricerca di immagini gratuite con API di pixabay",
+        },
+        project4: {
+          title: "Progetto 4",
+          description:
+            "Dashboard analitico con visualizzazioni interattive e report personalizzati.",
+        },
+      },
+      skills: {
+        title: "Competenze",
+        frontend: "Frontend",
+        backend: "Backend",
+        tools: "Strumenti",
+      },
+      contact: {
+        title: "Contatto",
+        subtitle: "Hai un progetto in mente?",
+        description:
+          "Sono sempre aperto a discutere nuovi progetti, idee creative o opportunità per far parte delle tue visioni.",
+        name: "Nome",
+        email: "Email",
+        message: "Messaggio",
+        sendMessage: "Invia Messaggio",
+        successMessage: "Grazie per il tuo messaggio! Ti contatterò presto.",
+      },
+      integrations: {
+        title: "Integrazioni",
+        subtitle: "Integrazioni tra CRM, E-commerce, WhatsApp e altro",
+        api: "API REST & GraphQL",
+        apiDesc:
+          "Integrazione di multiple API per sincronizzazione dati in tempo reale",
+        whatsapp: "WhatsApp Business API",
+        whatsappDesc: "Automazione messaggistica e assistenza clienti",
+        crm: "Sistemi CRM",
+        crmDesc: "Integrazione con Salesforce, HubSpot e altre piattaforme CRM",
+        ecommerce: "E-commerce",
+        ecommerceDesc:
+          "Connessione con Shopify, WooCommerce e piattaforme di pagamento",
+        listTitle: "Lista di integrazioni che ho lavorato",
+      },
+      footer: {
+        copyright: "© 2026 Valery Figueroa. Tutti i diritti riservati.",
+      },
+    },
+  };
 
-	const flagMap: Record<string, string> = {
-		es: '🇪🇸',
-		en: '🇬🇧',
-		it: '🇮🇹'
-	};
+  const flagMap: Record<string, string> = {
+    es: "🇪🇸",
+    en: "🇬🇧",
+    it: "🇮🇹",
+  };
 
-	type Language = 'es' | 'en' | 'it';
+  type Language = "es" | "en" | "it";
 
-	function getDefaultLanguage(): Language {
-		const saved = localStorage.getItem('language');
-		if (saved && (saved === 'es' || saved === 'en' || saved === 'it')) {
-			return saved;
-		}
-		const browserLang = navigator.language.split('-')[0];
-		if (browserLang === 'es' || browserLang === 'en' || browserLang === 'it') {
-			return browserLang;
-		}
-		return 'es';
-	}
+  function getDefaultLanguage(): Language {
+    const saved = localStorage.getItem("language");
+    if (saved && (saved === "es" || saved === "en" || saved === "it")) {
+      return saved;
+    }
+    const browserLang = navigator.language.split("-")[0];
+    if (browserLang === "es" || browserLang === "en" || browserLang === "it") {
+      return browserLang;
+    }
+    return "es";
+  }
 
-	function setLanguage(lang: Language): void {
-		localStorage.setItem('language', lang);
-		document.documentElement.setAttribute('lang', lang);
-		window.dispatchEvent(new CustomEvent('languagechange', { detail: { language: lang } }));
-	}
+  function setLanguage(lang: Language): void {
+    localStorage.setItem("language", lang);
+    document.documentElement.setAttribute("lang", lang);
+    window.dispatchEvent(
+      new CustomEvent("languagechange", { detail: { language: lang } })
+    );
+  }
 
-	function getNestedValue(obj: any, path: string): any {
-		return path.split('.').reduce((current: any, key: string) => current && current[key], obj);
-	}
+  function getNestedValue(obj: any, path: string): any {
+    return path
+      .split(".")
+      .reduce((current: any, key: string) => current && current[key], obj);
+  }
 
-	function updateLanguage(lang: Language): void {
-		setLanguage(lang);
-		const t = translations[lang as keyof typeof translations];
-		const tHero = (t as any).hero;
-		
-		// Update hero greeting first (special case - always update)
-		const heroTitle = document.querySelector('.hero-title');
-		if (heroTitle && tHero) {
-			const nameSpan = heroTitle.querySelector('.highlight');
-			const name = nameSpan?.textContent || tHero.name;
-			heroTitle.innerHTML = `${tHero.greeting} <span class="highlight">${name}</span>`;
-		}
-		
-		// Update all elements with data-i18n attribute
-		document.querySelectorAll('[data-i18n]').forEach(element => {
-			const key = element.getAttribute('data-i18n');
-			if (key) {
-				const value = getNestedValue(t, key);
-				if (value !== undefined) {
-					element.textContent = value;
-				}
-			}
-		});
+  function updateLanguage(lang: Language): void {
+    setLanguage(lang);
+    const t = translations[lang as keyof typeof translations];
+    const tHero = (t as any).hero;
 
-		// Update project descriptions
-		document.querySelectorAll('[data-project-index]').forEach((card, index) => {
-			const projectKey = `project${index + 1}` as keyof typeof t.projects;
-			const projectData = (t.projects as any)[projectKey];
-			if (projectData) {
-				const titleEl = card.querySelector(`[data-i18n="projects.${projectKey}.title"]`);
-				const descEl = card.querySelector(`[data-i18n="projects.${projectKey}.description"]`);
-				if (titleEl) {
-					titleEl.textContent = projectData.title;
-				}
-				if (descEl) {
-					descEl.textContent = projectData.description;
-				}
-			}
-		});
+    // Update hero greeting first (special case - always update)
+    const heroTitle = document.querySelector(".hero-title");
+    if (heroTitle && tHero) {
+      const nameSpan = heroTitle.querySelector(".highlight");
+      const name = nameSpan?.textContent || tHero.name;
+      heroTitle.innerHTML = `${tHero.greeting} <span class="highlight">${name}</span>`;
+    }
 
-		// Update skill categories
-		document.querySelectorAll('[data-category-key]').forEach(category => {
-			const key = category.getAttribute('data-category-key');
-			const titleEl = category.querySelector('.category-title');
-			if (titleEl && key && (t.skills as any)[key]) {
-				titleEl.textContent = (t.skills as any)[key];
-			}
-		});
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      if (key) {
+        const value = getNestedValue(t, key);
+        if (value !== undefined) {
+          element.textContent = value;
+        }
+      }
+    });
 
-		// Update flag
-		const currentFlag = document.getElementById('current-flag');
-		if (currentFlag) {
-			currentFlag.textContent = flagMap[lang] || '🇪🇸';
-		}
+    // Update project descriptions
+    document.querySelectorAll("[data-project-index]").forEach((card, index) => {
+      const projectKey = `project${index + 1}` as keyof typeof t.projects;
+      const projectData = (t.projects as any)[projectKey];
+      if (projectData) {
+        const titleEl = card.querySelector(
+          `[data-i18n="projects.${projectKey}.title"]`
+        );
+        const descEl = card.querySelector(
+          `[data-i18n="projects.${projectKey}.description"]`
+        );
+        if (titleEl) {
+          titleEl.textContent = projectData.title;
+        }
+        if (descEl) {
+          descEl.textContent = projectData.description;
+        }
+      }
+    });
 
-		// Update active state
-		document.querySelectorAll('.language-option').forEach(option => {
-			option.classList.toggle('active', option.getAttribute('data-lang') === lang);
-		});
+    // Update skill categories
+    document.querySelectorAll("[data-category-key]").forEach((category) => {
+      const key = category.getAttribute("data-category-key");
+      const titleEl = category.querySelector(".category-title");
+      if (titleEl && key && (t.skills as any)[key]) {
+        titleEl.textContent = (t.skills as any)[key];
+      }
+    });
 
-		// Store current language for form submission
-		window.currentLanguage = lang;
-	}
+    // Update flag
+    const currentFlag = document.getElementById("current-flag");
+    if (currentFlag) {
+      currentFlag.textContent = flagMap[lang] || "🇪🇸";
+    }
 
-	// Initialize language
-	const currentLang = getDefaultLanguage();
-	updateLanguage(currentLang);
+    // Update active state
+    document.querySelectorAll(".language-option").forEach((option) => {
+      option.classList.toggle(
+        "active",
+        option.getAttribute("data-lang") === lang
+      );
+    });
 
-	// Language toggle
-	const languageToggle = document.getElementById('language-toggle');
-	const languageMenu = document.getElementById('language-menu');
-	
-	if (languageToggle && languageMenu) {
-		languageToggle.addEventListener('click', (e) => {
-			e.stopPropagation();
-			languageMenu.classList.toggle('active');
-		});
+    // Store current language for form submission
+    window.currentLanguage = lang;
+  }
 
-		// Close menu when clicking outside
-		document.addEventListener('click', (e: MouseEvent) => {
-			const target = e.target as Node | null;
-			if (target && !languageToggle.contains(target) && !languageMenu.contains(target)) {
-				languageMenu.classList.remove('active');
-			}
-		});
+  // Initialize language
+  const currentLang = getDefaultLanguage();
+  updateLanguage(currentLang);
 
-		// Language selection
-		document.querySelectorAll('.language-option').forEach(option => {
-			option.addEventListener('click', () => {
-				const lang = option.getAttribute('data-lang') as Language | null;
-				if (lang && (lang === 'es' || lang === 'en' || lang === 'it')) {
-					updateLanguage(lang);
-					languageMenu.classList.remove('active');
-				}
-			});
-		});
-	}
+  // Language toggle
+  const languageToggle = document.getElementById("language-toggle");
+  const languageMenu = document.getElementById("language-menu");
 
-	// Listen for language changes from other components
-	window.addEventListener('languagechange', ((e: CustomEvent<{ language: Language }>) => {
-		const lang = e.detail.language;
-		updateLanguage(lang);
-	}) as EventListener);
+  if (languageToggle && languageMenu) {
+    languageToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      languageMenu.classList.toggle("active");
+    });
 
-	// Make translations available globally
-	window.translations = translations;
+    // Close menu when clicking outside
+    document.addEventListener("click", (e: MouseEvent) => {
+      const target = e.target as Node | null;
+      if (
+        target &&
+        !languageToggle.contains(target) &&
+        !languageMenu.contains(target)
+      ) {
+        languageMenu.classList.remove("active");
+      }
+    });
 
-	// Theme toggle functionality
-	const themeToggle = document.getElementById('theme-toggle');
-	const html = document.documentElement;
-	
-	if (themeToggle) {
-		themeToggle.addEventListener('click', () => {
-			const currentTheme = html.getAttribute('data-theme');
-			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-			html.setAttribute('data-theme', newTheme);
-			localStorage.setItem('theme', newTheme);
-		});
-	}
+    // Language selection
+    document.querySelectorAll(".language-option").forEach((option) => {
+      option.addEventListener("click", () => {
+        const lang = option.getAttribute("data-lang") as Language | null;
+        if (lang && (lang === "es" || lang === "en" || lang === "it")) {
+          updateLanguage(lang);
+          languageMenu.classList.remove("active");
+        }
+      });
+    });
+  }
 
-	// Mobile menu toggle
-	const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-	const navLinks = document.querySelector('.nav-links');
-	
-	if (mobileMenuToggle && navLinks) {
-		mobileMenuToggle.addEventListener('click', () => {
-			navLinks.classList.toggle('active');
-		});
+  // Listen for language changes from other components
+  window.addEventListener("languagechange", ((
+    e: CustomEvent<{ language: Language }>
+  ) => {
+    const lang = e.detail.language;
+    updateLanguage(lang);
+  }) as EventListener);
 
-		// Close menu when clicking on a link
-		navLinks.querySelectorAll('a').forEach(link => {
-			link.addEventListener('click', () => {
-				navLinks.classList.remove('active');
-			});
-		});
-	}
+  // Make translations available globally
+  window.translations = translations;
+
+  // Theme toggle functionality
+  const themeToggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = html.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  }
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    // Close menu when clicking on a link
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+  }
 </script>
