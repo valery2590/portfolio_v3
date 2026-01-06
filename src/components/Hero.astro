@@ -22,10 +22,7 @@ const t = getTranslations(currentLang);
 		</div>
 		<div class="hero-image">
 			<div class="avatar-placeholder">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-					<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-					<circle cx="12" cy="7" r="4"></circle>
-				</svg>
+				<img src="/src/assets/profile_picture.png" alt="Valery Figueroa" class="hero-image-img" />
 			</div>
 		</div>
 	</div>
@@ -141,7 +138,7 @@ const t = getTranslations(currentLang);
 		width: 300px;
 		height: 300px;
 		border-radius: 50%;
-		background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+		/*background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);*/
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -161,10 +158,16 @@ const t = getTranslations(currentLang);
 		animation: pulse 2s infinite;
 	}
 
-	.avatar-placeholder svg {
+	/* .avatar-placeholder svg {
 		width: 150px;
 		height: 150px;
-	}
+	} */
+
+	img.hero-image-img {
+    width: 100%;
+    border-radius: 150px;
+	transform: rotate(45deg)
+}
 
 	.scroll-indicator {
 		position: absolute;
